@@ -9,7 +9,7 @@ This repository implements the fundamental Data Structure &amp; Algorithms in Py
     1. Recursive Bubble Sort
     1. Recursive Insertion Sort
     1. Selection Sort
-1. [Data Structures] (https://github.com/AtharvaMuley/Data-Structure-Algorithms/tree/master/DS)
+1. [Data Structures](https://github.com/AtharvaMuley/Data-Structure-Algorithms/tree/master/DS)
     1. Binary Tree
     1. Graph
     1. Linked List
