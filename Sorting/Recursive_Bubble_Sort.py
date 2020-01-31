@@ -1,4 +1,3 @@
-
 def recursive_bubble_sort(A):
     if (len(A) == 1):
         return A

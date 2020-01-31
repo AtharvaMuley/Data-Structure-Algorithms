@@ -44,19 +44,19 @@ class List(ListNode):
     def getNodeCount(self):
         return self.node_count
 
-    def printList(self):
+    def __str__(self):
+        out = "Linked List: "
         temp = self.head
         while temp != None:
-            print("{}".format(temp.val), end=" ")
+            out += "{} ".format(temp.val)
             temp = temp.next
-        #Added blank print() to stop printing grabage character on Mac OS
-        print()
+        # out += '\n'
+        return out
 
 if __name__ == "__main__":
     custom_list = List()
     custom_list.insertNode([4,1,2,3,4])
     custom_list.insertNode(6)
     custom_list.insertNode(7)
-    # custom_list.removeElement(1)
-    custom_list.printList()
+    print(custom_list)
     print(custom_list.getNodeCount())

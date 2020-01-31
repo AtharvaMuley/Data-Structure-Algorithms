@@ -31,14 +31,14 @@ class Tree(Node):
         self.printPreorder(root.right)
 
     def printInorder(self, root):
-        if root == None:
+        if root is None:
             return
         self.printPreorder(root.left)
         print("{}".format(root.val), end=" ")
         self.printPreorder(root.right)
 
     def printPostorder(self, root):
-        if root == None:
+        if root is None:
             return
         self.printPreorder(root.left)
         self.printPreorder(root.right)
