@@ -1,3 +1,7 @@
+"""
+Author: Atharva Muley
+Date: Jan 30 2020
+"""
 def merge_sort(A):
     if len(A) > 1: 
         m = (len(A))//2

@@ -1,3 +1,7 @@
+"""
+Author: Atharva Muley
+Date: Jan 30 2020
+"""
 def recursive_insertion_sort(A, n):
     if (n == 1):
         return A

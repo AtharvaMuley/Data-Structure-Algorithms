@@ -1,13 +1,14 @@
 """
 Author: Atharva Muley
-Date: Jan 30 2020
+Date: Jan 31 2020
 """
 class ListNode:
     def __init__(self, value):
         self.val = value
         self.next = None
+        self.prev = None
 
-class List(ListNode):
+class DoublyList(ListNode):
     def __init__(self):
         self.head = None
         self.tail = None
@@ -22,6 +23,7 @@ class List(ListNode):
                 self.head = self.tail = ListNode(each)
             else:
                 temp = ListNode(each)
+                temp.prev = self.tail
                 self.tail.next = temp
                 self.tail = temp
             self.node_count += 1
@@ -34,6 +36,7 @@ class List(ListNode):
             if curr.val == value:
                 if prev:
                     prev.next = next
+                    next.prev = prev
                     del curr
                 else:
                     self.head = next
@@ -49,18 +52,19 @@ class List(ListNode):
         return self.node_count
 
     def __str__(self):
-        out = "Linked List: ["
+        out = "Linked List: "
         temp = self.head
         while temp != None:
             out += "{} ".format(temp.val)
             temp = temp.next
-        out += ']'
+        # out += '\n'
         return out
 
+
 if __name__ == "__main__":
-    custom_list = List()
+    custom_list = DoublyList()
     custom_list.insertNode([4,1,2,3,4])
-    custom_list.insertNode(6)
-    custom_list.insertNode(7)
+    print(custom_list)
+    custom_list.removeElement(3)
     print(custom_list)
     print(custom_list.getNodeCount())

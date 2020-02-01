@@ -1,3 +1,7 @@
+"""
+Author: Atharva Muley
+Date: Jan 30 2020
+"""
 class Node:
     def __init__(self, value):
         self.val = value
@@ -24,7 +28,7 @@ class Tree(Node):
                     self.insert(root.right, value)
 
     def printPreorder(self, root):
-        if root == None:
+        if root is None:
             return
         print("{}".format(root.val), end=" ")
         self.printPreorder(root.left)
@@ -33,15 +37,15 @@ class Tree(Node):
     def printInorder(self, root):
         if root is None:
             return
-        self.printPreorder(root.left)
+        self.printInorder(root.left)
         print("{}".format(root.val), end=" ")
-        self.printPreorder(root.right)
+        self.printInorder(root.right)
 
     def printPostorder(self, root):
         if root is None:
             return
-        self.printPreorder(root.left)
-        self.printPreorder(root.right)
+        self.printPostorder(root.left)
+        self.printPostorder(root.right)
         print("{}".format(root.val), end=" ")
 
 if __name__ == "__main__":

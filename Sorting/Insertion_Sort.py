@@ -1,3 +1,7 @@
+"""
+Author: Atharva Muley
+Date: Jan 30 2020
+"""
 def insertion_sort(A):
     for i in range(1, len(A)):
         j = i - 1

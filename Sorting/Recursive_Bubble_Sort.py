@@ -1,3 +1,7 @@
+"""
+Author: Atharva Muley
+Date: Jan 30 2020
+"""
 def recursive_bubble_sort(A):
     if (len(A) == 1):
         return A

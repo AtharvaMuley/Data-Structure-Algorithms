@@ -1,3 +1,7 @@
+"""
+Author: Atharva Muley
+Date: Jan 30 2020
+"""
 def selection_sort(A):
     for i in range(len(A)-1):
         min_index = i
